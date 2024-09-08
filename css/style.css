@@ -1,0 +1,208 @@
+/* !Import */
+@font-face {
+    font-family:'leagueR' ;
+    src: url(../fonts/LeagueSpartan-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family:'leagueM' ;
+    src: url(../fonts/LeagueSpartan-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family:'leagueB';
+    src: url(../fonts/LeagueSpartan-Bold.ttf);
+    font-weight: 700;
+}
+/* !Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* !Global Content */
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--White);
+    font-family: sans-serif;
+    font-size:15px;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+}
+/* Container */
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right:auto ;
+}
+
+/* H1 */
+h1{
+    font-family:'leagueB';
+    color: var(--Very-Dark-Magenta);
+    font-size: 35px;
+    line-height: 0.8;
+    margin-bottom: 0.5em;
+
+}
+/* !Body Content */
+/*?========Start-containe========*/
+
+main .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0px;
+
+}
+/* ====Header==== */
+.container .description p{
+    color: var(--Dark-Grayish-Magenta);
+    font-family:'leagueM' ;
+    padding-bottom: 2em;
+}
+
+/* ====Rate-Section==== */
+.container .rate {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.container .rate .rate-box{
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 1em 4em;
+    margin-bottom: 1em;
+    border-radius:0.4em ;
+}
+.container .rate .rate-box p{
+    color: var(--Very-Dark-Magenta);
+    font-family:'leagueB';
+}
+/* ====Comments-Section==== */
+.container #comments {
+    text-align: start;
+}
+.container #comments .comments-card {
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 0.4em;
+    padding: 2em;
+    margin-bottom: 1em;
+
+}
+.container #comments .comments-card img {
+    border-radius: 50%;
+    width: 15%;
+}
+
+#comments .comments-card .title  {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+#comments .comments-card .title span {
+    color: var(--White);
+    font-family:'leagueB';
+    line-height: 1;
+}
+#comments .comments-card .title span p {
+    color: var(--Soft-Pink);
+    font-family:'leagueR' ;
+}
+.container #comments .comments-card > p {
+    color: var(--Light-Grayish-Magenta);
+    margin-top: 1em;
+}
+
+
+
+    
+/* !Media Query */
+/* Mobile: 320px - 480px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 350px;     
+}
+}
+
+/* Tablet: 768px - 1024px */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 750px; 
+    }
+}
+
+@media only screen and (min-width:992px ) {
+    .container {
+        width: 970px; 
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    .container header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container .description{
+        text-align: start;
+        width: 30%;
+    }
+    .container .description h1{
+        font-size: 44px;
+    }
+    
+    .container .rate{
+        display: flex;
+        width: 40%;
+        margin-top: 2em;
+    }
+    .container .rate .rate-box{
+        display: flex;
+        gap: 1em;
+    }
+    .container .rate .box1{
+        align-self:self-start;
+    }
+    .container .rate .box2{
+        align-self:center;
+    }
+    .container .rate .box3{
+        align-self:self-end;
+    }
+    .container #comments{
+        display:flex ;
+        gap: 2em;
+        height: 270px;
+        
+    }
+    .container #comments .card1{
+        align-self: flex-start;
+
+    }
+    .container #comments .card2{
+        align-self:center;
+
+    }
+    .container #comments .card3{
+        align-self: flex-end    ;
+
+    }
+    
+}
